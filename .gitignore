@@ -1,0 +1,10 @@
+# Ignore Blender addon ZIP packages
+*.zip
+
+# Ignore python cache files
+__pycache__/
+*.pyc
+
+# OS-specific files
+.DS_Store
+Thumbs.db
