@@ -1,0 +1,11 @@
+schema_version = "1.0.0"
+id = "auto_3point_studio"
+version = "1.0.0"
+name = "Auto 3-Point Studio"
+tagline = "Creates a 3-point lighting setup and tracked camera for the active object."
+maintainer = "SkdSam & Mr Steve 3D"
+type = "add-on"
+blender_version_min = "4.2.0"
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
