@@ -47,8 +47,11 @@ Extension packages in Blender 4.2+ are prefixed (e.g., `bl_ext.user_default.my_a
 * **DO** use `mathutils` for matrix and vector calculations to ensure correct transformation placement in 3D space.
 * **DO** register and unregister all classes cleanly using `bpy.utils.register_class` and `bpy.utils.unregister_class`.
 * **DO** use standard Blender naming conventions for new objects so they can be easily cleaned up or identified by the user.
+* **DO** ensure any UI icon used is fully compatible and exists in Blender 3.6 (e.g., use `'LIGHT'` instead of non-existent/renamed ones like `'LIGHTPRESET'`) to prevent compatibility exceptions across versions.
 
 ### DON'Ts
 * **DON'T** use hardcoded collection names (like `Collection` or `Collection 1`) which might not exist; instead, use `context.collection` or the active collection.
 * **DON'T** call `bpy.ops` directly for object property modification if it can be done via direct data API manipulation (e.g., `obj.location = ...` instead of `bpy.ops.transform.translate(...)`).
 * **DON'T** assume the user is in Object Mode. Always check or temporarily set context mode when performing object creation/linking.
+* **DON'T** use specialized or preset-specific icons (like `'LIGHTPRESET'`) that are not present in older Blender versions (3.6), causing layout drawing failures.
+

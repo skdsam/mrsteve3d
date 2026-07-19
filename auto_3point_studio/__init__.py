@@ -270,7 +270,7 @@ class VIEW3D_PT_auto_3point_studio(bpy.types.Panel):
             return
 
         # Setup Button
-        layout.operator("object.setup_3point_studio", icon='LIGHTPRESET', text="Setup Studio Rig")
+        layout.operator("object.setup_3point_studio", icon='LIGHT', text="Setup Studio Rig")
 
         # Rig Status & Settings
         target_obj = bpy.data.objects.get(props.target_name)
